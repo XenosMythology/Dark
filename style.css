@@ -318,9 +318,12 @@ header input[id='open']:checked ~ .mobile-menu
 {
     .fa-bars{display: block;
         visibility: visible;
-}
-.data{
+    }
+    .footer-top{display: none;}
+.data button{
     visibility: hidden;
+}
+.mobile-menu{
 }
     nav ul, .data  {display: none;}
     nav{padding: 40px 5%;}
@@ -1197,12 +1200,14 @@ h6{
 {
      width: 90%;
     border-radius: 4px;
+    
 }
 .rated .container .sub-section .card
 {
     transform: scale(1);
     transition: 0.3s;
     opacity: 0;
+    
 
 }
 .rated input[id='rated-1']:checked ~ .container .sub-section:nth-child(1) ,
@@ -1563,11 +1568,22 @@ h6{
     gap: 50px;
     text-align: center;
 }
+.series img
+{
+     max-width: 100%;
+    height: auto;
+    display: block;
+}
 .series .container
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 25px;
+}
+.series .container crad
+{
+    
+    
 }
 
 
