@@ -1,3 +1,8 @@
+
+html{
+        overflow-x: hidden;
+
+}
 * {
     padding: 0;
     margin: 0;
@@ -18,6 +23,8 @@
 body {
     font-family: var(--regular);
     height: 5000px;
+        overflow-x: hidden;
+
 }
 
 /*start header */
@@ -157,6 +164,7 @@ header .open{
     overflow-y: auto;
     right: -350px;
     transition: 0,3s;
+     overflow-x: hidden;
     
 }
 .mobile-menu::-webkit-scrollbar
@@ -316,9 +324,16 @@ header input[id='open']:checked ~ .mobile-menu
 {
     .fa-bars{display: block;
         visibility: visible;
+    }
+    .footer-top{display: none;}
+.data button{
+    visibility: hidden;
+}
+.mobile-menu{
 }
     nav ul, .data  {display: none;}
     nav{padding: 40px 5%;}
+
     
 }
 /* end nav */
@@ -472,85 +487,47 @@ section {
 
     
 }
-/* 1200px: 4 cards */
-@media (max-width: 1200px) {
-    .container-1,
-    .container-2,
-    .container-3 {
-        grid-template-columns: repeat(4, 1fr);
-    }
+
+.container-1,
+.container-2,
+.container-3 {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 card */
+    gap: 12px;
+    padding: 12px;
 }
 
-/* 800px: 3 cards */
-@media (max-width: 800px) {
-    .container-1,
-    .container-2,
-    .container-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .sec-title {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .button-title-div {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .button-title {
-        font-size: 0.75rem;
-        padding: 8px 12px;
-        min-width: 80px;
-    }
-}
-
-/* 500px: 2 cards */
-@media (max-width: 500px) {
+/* 2 cards: from 500px to 699px */
+@media (min-width: 500px) and (max-width: 699px) {
     .container-1,
     .container-2,
     .container-3 {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .movies {
-        padding: 15px 5px;
-    }
-
-    .sec-title b {
-        font-size: 1.3rem;
+        gap: 14px;
+        padding: 14px;
     }
 }
 
-/* 300px: 1 card */
-@media (max-width: 320px) {
+/* 3 cards: from 700px to 999px */
+@media (min-width: 700px) and (max-width: 999px) {
     .container-1,
     .container-2,
     .container-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .button-title-div {
-        gap: 8px;
-    }
-
-    .button-title {
-        font-size: 0.7rem;
-        padding: 6px 10px;
-        width: auto;
-    }
-
-    .bunner-span {
-        font-size: 0.8rem;
-    }
-
-    .sec-title b {
-        font-size: 1.1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 16px;
     }
 }
-.movies div{
-    
+
+/* 4 cards: 1000px and above */
+@media (min-width: 1000px) {
+    .container-1,
+    .container-2,
+    .container-3 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
 }
 
 
@@ -1229,12 +1206,14 @@ h6{
 {
      width: 90%;
     border-radius: 4px;
+    
 }
 .rated .container .sub-section .card
 {
     transform: scale(1);
     transition: 0.3s;
     opacity: 0;
+    
 
 }
 .rated input[id='rated-1']:checked ~ .container .sub-section:nth-child(1) ,
@@ -1264,6 +1243,7 @@ h6{
 @media (min-width: 1000px) {
     .rated .container .sub-section {
         grid-template-columns: repeat(4, 1fr);
+        
     }
 }
 
@@ -1325,6 +1305,7 @@ h6{
   gap: 25px;
   align-items: flex-start;
 }
+
 .heading-data span
 {
     font-size: 13px;
@@ -1593,11 +1574,22 @@ h6{
     gap: 50px;
     text-align: center;
 }
+.series img
+{
+     max-width: 100%;
+    height: auto;
+    display: block;
+}
 .series .container
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 25px;
+}
+.series .container crad
+{
+    
+    
 }
 
 
